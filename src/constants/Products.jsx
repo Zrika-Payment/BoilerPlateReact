@@ -1,0 +1,80 @@
+export  const products = [
+    {
+      id: 1,
+      name: "Wireless Headphones",
+      price: 79.99,
+      originalPrice: 99.99,
+      category: "Electronics",
+      rating: 4.5,
+      reviews: 128,
+      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop",
+      inStock: true,
+      description: "Premium wireless headphones with noise cancellation and 30-hour battery life.",
+      features: ["Bluetooth 5.0", "Active Noise Cancellation", "30h Battery"]
+    },
+    {
+      id: 2,
+      name: "Smart Watch",
+      price: 199.99,
+      originalPrice: 249.99,
+      category: "Wearables",
+      rating: 4.8,
+      reviews: 342,
+      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop",
+      inStock: true,
+      description: "Fitness tracking smartwatch with heart rate monitor and GPS.",
+      features: ["Heart Rate Monitor", "GPS Tracking", "Water Resistant"]
+    },
+    {
+      id: 3,
+      name: "Laptop Stand",
+      price: 49.99,
+      originalPrice: 69.99,
+      category: "Accessories",
+      rating: 4.3,
+      reviews: 89,
+      image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=300&fit=crop",
+      inStock: true,
+      description: "Ergonomic aluminum laptop stand with adjustable height.",
+      features: ["Aluminum Build", "Adjustable Height", "Portable Design"]
+    },
+    {
+      id: 4,
+      name: "Mechanical Keyboard",
+      price: 129.99,
+      originalPrice: 159.99,
+      category: "Electronics",
+      rating: 4.7,
+      reviews: 215,
+      image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=300&fit=crop",
+      inStock: false,
+      description: "RGB mechanical keyboard with custom switches and programmable keys.",
+      features: ["RGB Lighting", "Custom Switches", "Programmable Keys"]
+    },
+    {
+      id: 5,
+      name: "Wireless Mouse",
+      price: 39.99,
+      originalPrice: 54.99,
+      category: "Electronics",
+      rating: 4.4,
+      reviews: 156,
+      image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=300&fit=crop",
+      inStock: true,
+      description: "Ergonomic wireless mouse with precision tracking and long battery life.",
+      features: ["Ergonomic Design", "Precision Sensor", "Long Battery Life"]
+    },
+    {
+      id: 6,
+      name: "USB-C Hub",
+      price: 59.99,
+      originalPrice: 79.99,
+      category: "Accessories",
+      rating: 4.6,
+      reviews: 198,
+      image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&h=300&fit=crop",
+      inStock: true,
+      description: "Multi-port USB-C hub with HDMI, USB 3.0, and SD card reader.",
+      features: ["7-in-1 Hub", "4K HDMI Output", "Fast Data Transfer"]
+    }
+  ];

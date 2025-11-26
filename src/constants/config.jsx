@@ -18,3 +18,26 @@ export const API_ENDPOINTS = {
   POSTS: '/posts',
   COMMENTS: '/comments',
 };
+
+
+export const NAVITEMS = ['Home', 'About', 'Dashboard'];
+
+export const sections = ['company', 'products', 'support', 'legal'];
+
+export const CompanySections = ['About Us', 'Careers', 'Press', 'Blog'];
+
+export const products = ['Features', 'Pricing', 'Security', 'Updates'];
+
+export const support = ['Help Center', 'Contact Us', 'Documentation', 'FAQ'];
+
+export const legal = ['Privacy Policy','Terms of Service','Cookie Policy','Licenses'];
+
+
+
+
+
+
+
+
+
+
