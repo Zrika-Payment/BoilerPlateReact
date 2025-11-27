@@ -1,5 +1,4 @@
 export default function Footer({ CompanySections, products, support, legal }) {
-    console.log(products);
     return (
         <footer className="bg-white py-8 px-4 mt-auto">
             <div className="max-w-7xl mx-auto">

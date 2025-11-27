@@ -6,9 +6,9 @@ import { Input } from './components/common/Input';
 import { useFetch } from './hooks/useFetch';
 import { NAVITEMS } from './constants/config';
 import Footer from './components/layout/Footer';
-import ProductCards from './components/layout/ProductCards';
 
 import { sections, CompanySections, products, support, legal } from './constants/config'
+import { CardDemo } from './components/layout/CardDemo';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,8 +28,7 @@ function App() {
           <p className="text-gray-600 mb-6">
             A production-ready, extensible architecture for building large-scale React applications.
           </p>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6 ">
+          {/* <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6 ">
             <h2 className="text-2xl font-semibold mb-4">Counter Demo</h2>
             <div className="flex items-center space-x-4">
               <Button onClick={() => setCount(c => c - 1)} variant="danger">
@@ -45,9 +44,8 @@ function App() {
               <Input label="Name" />
 
             </div>
-          </div>
-          <Input />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          </div> */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg">
               <h3 className="font-semibold text-lg mb-2">🏗️ Architecture</h3>
               <ul className="text-sm text-gray-700 space-y-1">
@@ -67,8 +65,9 @@ function App() {
                 <li>• Configuration management</li>
               </ul>
             </div>
-          </div>
-          <ProductCards/>
+          </div> */}
+          <CardDemo/>
+          {/* <ProductCards/> */}
         </div>
         
 
