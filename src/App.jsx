@@ -6,7 +6,7 @@ import { Input } from './components/common/Input';
 import { useFetch } from './hooks/useFetch';
 import { NAVITEMS } from './constants/config';
 import Footer from './components/layout/Footer';
-
+import FormLayout from './components/layout/FormLayout';
 import { sections, CompanySections, products, support, legal } from './constants/config'
 import { CardDemo } from './components/layout/CardDemo';
 
@@ -66,10 +66,11 @@ function App() {
               </ul>
             </div>
           </div> */}
-          <CardDemo/>
+          <CardDemo />
+          <FormLayout />
           {/* <ProductCards/> */}
         </div>
-        
+
 
       </main>
       <Footer CompanySections={CompanySections} products={products} support={support} legal={legal} />

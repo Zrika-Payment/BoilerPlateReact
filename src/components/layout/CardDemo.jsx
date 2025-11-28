@@ -1,9 +1,9 @@
-import { Card } from "../common/CardLayout"
-import { CardHeader } from "../common/CardLayout"
-import { CardDescription } from "../common/CardLayout"
-import { CardTitle } from "../common/CardLayout"
-import { CardContent } from "../common/CardLayout"
-import { CardFooter } from "../common/CardLayout"
+import { Card } from "../common/Card"
+import { CardHeader } from "../common/Card"
+import { CardDescription } from "../common/Card"
+import { CardTitle } from "../common/Card"
+import { CardContent } from "../common/Card"
+import { CardFooter } from "../common/Card"
 export function CardDemo() {
     Card.Header = CardHeader;
     Card.Description = CardDescription;
