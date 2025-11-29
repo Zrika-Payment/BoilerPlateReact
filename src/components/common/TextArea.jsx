@@ -1,5 +1,5 @@
-// Reusable Input Component
-export const Input = ({ label, error, required, className = '', ...props }) => {
+// Reusable Textarea Component
+export const Textarea = ({ label, error, required, className = '', ...props }) => {
   return (
     <div className="w-full">
       {label && (
@@ -7,8 +7,8 @@ export const Input = ({ label, error, required, className = '', ...props }) => {
           {label} {required && <span className="text-red-500">*</span>}
         </label>
       )}
-      <input
-        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition ${
+      <textarea
+        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition resize-none ${
           error ? 'border-red-500' : 'border-gray-300'
         } ${className}`}
         {...props}

@@ -9,7 +9,7 @@ import Footer from './components/layout/Footer';
 import FormLayout from './components/layout/FormLayout';
 import { sections, CompanySections, products, support, legal } from './constants/config'
 import { CardDemo } from './components/layout/CardDemo';
-
+import { Contactus } from './pages/Contactus';
 function App() {
   const [count, setCount] = useState(0);
   // const CompanyDetail = useFetch("https://fake-json-api.mock.beeceptor.com/companies",{});
@@ -66,9 +66,10 @@ function App() {
               </ul>
             </div>
           </div> */}
-          <CardDemo />
+          <CardDemo  />
           <FormLayout />
           {/* <ProductCards/> */}
+          <Contactus/>
         </div>
 
 

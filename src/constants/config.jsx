@@ -20,7 +20,7 @@ export const API_ENDPOINTS = {
 };
 
 
-export const NAVITEMS = ['Home', 'About', 'Dashboard','Contact us'];
+export const NAVITEMS = ['Home', 'About', 'Dashboard', 'Contactus'];
 
 export const sections = ['company', 'products', 'support', 'legal'];
 
@@ -30,9 +30,16 @@ export const products = ['Features', 'Pricing', 'Security', 'Updates'];
 
 export const support = ['Help Center', 'Contact Us', 'Documentation', 'FAQ'];
 
-export const legal = ['Privacy Policy','Terms of Service','Cookie Policy','Licenses'];
+export const legal = ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Licenses'];
 
-
+export const countryOptions = [
+  { value: '', label: 'Select a country' },
+  { value: 'us', label: 'United States' },
+  { value: 'uk', label: 'United Kingdom' },
+  { value: 'ca', label: 'Canada' },
+  { value: 'au', label: 'Australia' },
+  { value: 'in', label: 'India' }
+];
 
 
 
