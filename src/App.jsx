@@ -10,11 +10,15 @@ import FormLayout from './components/layout/FormLayout';
 import { sections, CompanySections, products, support, legal } from './constants/config'
 import { CardDemo } from './components/layout/CardDemo';
 import { Contactus } from './pages/Contactus';
+import { Carousel } from './components/layout/Carousel';
+import img1 from './assets/Images/img1.jpg';
+import img2 from './assets/Images/img2.jpg';
+import img3 from './assets/Images/img3.jpg'
 function App() {
+  const img = [img1,img2,img3];
   const [count, setCount] = useState(0);
   // const CompanyDetail = useFetch("https://fake-json-api.mock.beeceptor.com/companies",{});
   //console.log(CompanyDetail);
-  console.log(NAVITEMS)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,6 +32,7 @@ function App() {
           <p className="text-gray-600 mb-6">
             A production-ready, extensible architecture for building large-scale React applications.
           </p>
+          <Carousel items={img} />
           {/* <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6 ">
             <h2 className="text-2xl font-semibold mb-4">Counter Demo</h2>
             <div className="flex items-center space-x-4">
@@ -66,10 +71,10 @@ function App() {
               </ul>
             </div>
           </div> */}
-          <CardDemo  />
+          <CardDemo />
           <FormLayout />
           {/* <ProductCards/> */}
-          <Contactus/>
+          <Contactus />
         </div>
 
 
