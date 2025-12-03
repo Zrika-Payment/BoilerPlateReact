@@ -1,70 +1,63 @@
-import Button from "../common/Button";
+import { useState } from "react";
 
-function handleClick() {
-    const next = document.querySelector('.carousel-next');
-    const prev = document.querySelector('.carousel-prev');
-    const inner = document.querySelector('.carousel-inner');
-    const items = document.querySelectorAll('.carousel-item');
-    let index = 0;
-    function updateCarousel() {
-        inner.style.transform = `translate(-${index * 600})px`;
+const Carousel = ({ items = [] }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-    }
-    next.addEventListener('click', () => {
-        index = (index + 1) % items.length;
-        updateCarousel();
+  const prevSlide = () => {
+    setActiveIndex((i) => (i === 0 ? items.length - 1 : i - 1));
+  };
 
-    })
-    prev.addEventListener('click', () => {
-        index = (index - 1) % items.length;
-        updateCarousel();
-    })
-}
+  const nextSlide = () => {
+    setActiveIndex((i) => (i === items.length - 1 ? 0 : i + 1));
+  };
 
+  return (
+    <div className="relative w-full overflow-hidden">
+      {/* Slides container */}
+      <div
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      >
+        {items.map((img, i) => (
+          <div key={i} className="min-w-full flex-shrink-0">
+            <img
+              src={img}
+              alt={`Slide-${i}`}
+              className="w-full h-80 object-cover"
+            />
+          </div>
+        ))}
+      </div>
 
-export function Carousel({ items }) {
+      {/* Navigation */}
+      <button
+        onClick={prevSlide}
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full"
+      >
+        ‹
+      </button>
 
-    return (
-        <div className=" w-2xl overflow-hidden relative m-auto">
-            <div className="carousel-inner w-2xl h-80 object-cover">
-                <CaurouselItems Items={items} />
-                <NavigationButton />
-                <IndicatorDots items={items} />
-            </div>
-        </div>
-    )
-}
+      <button
+        onClick={nextSlide}
+        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full"
+      >
+        ›
+      </button>
 
+      {/* Indicators */}
+      <div className="absolute bottom-4 w-full flex justify-center gap-2">
+        {items.map((_, i) => (
+          <div
+            key={i}
+            className={`h-3 w-3 rounded-full cursor-pointer ${
+              activeIndex === i ? "bg-white" : "bg-white/50"
+            }`}
+            onClick={() => setActiveIndex(i)}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export function CaurouselItems({ Items }) {
-
-    return (
-        <div className="flex transition-transform duration-500 ease-in-out ">
-            {Items?.map((list, Index) => <div key={Index} className="carousel-item"><img src={list} alt="List-items" className="w-xl h-80 object-cover " />{list}</div>)}
-        </div>
-    )
-
-}
-
-
-
-export function NavigationButton() {
-
-    return (
-        <>
-            <Button className="carousel-prev absolute top-2/4 transform translate-y-2/4 bg-fff p-2.5 text-2xl cursor-pointer left-2.5" onClick={handleClick} >left</Button>
-            <Button className="carousel-next absolute top-2/4 transform translate-y-2/4 bg-fff p-2.5 text-2xl cursor-pointer right-2.5" onClick={handleClick}>right</Button>
-        </>
-    )
-
-}
-
-export function IndicatorDots({ items }) {
-    return (
-        <div>
-            {
-                items?.map((list, index) => <span key={index}>{index}</span>)
-            }
-        </div>
-    )
-}
+export default Carousel;

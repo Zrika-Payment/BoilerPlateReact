@@ -10,12 +10,15 @@ import FormLayout from './components/layout/FormLayout';
 import { sections, CompanySections, products, support, legal } from './constants/config'
 import { CardDemo } from './components/layout/CardDemo';
 import { Contactus } from './pages/Contactus';
-import { Carousel } from './components/layout/Carousel';
+import  Carousel from './components/layout/Carousel';
 import img1 from './assets/Images/img1.jpg';
 import img2 from './assets/Images/img2.jpg';
-import img3 from './assets/Images/img3.jpg'
+import img3 from './assets/Images/img3.jpg';
+import img4 from './assets/Images/img4.jpg';
+import img5 from './assets/Images/img5.jpg';
+import img6 from './assets/Images/img6.jpg';
 function App() {
-  const img = [img1,img2,img3];
+  const img = [img1,img2,img3,img4,img5,img6];
   const [count, setCount] = useState(0);
   // const CompanyDetail = useFetch("https://fake-json-api.mock.beeceptor.com/companies",{});
   //console.log(CompanyDetail);
@@ -71,10 +74,9 @@ function App() {
               </ul>
             </div>
           </div> */}
-          <CardDemo />
-          <FormLayout />
+     
           {/* <ProductCards/> */}
-          <Contactus />
+       
         </div>
 
 
