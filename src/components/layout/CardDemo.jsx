@@ -11,7 +11,7 @@ export function CardDemo() {
     Card.Content = CardContent;
     Card.Footer = CardFooter;
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
             {
                 [1, 2, 3].map((i) => {
                     return (<Card key={i} className="hover:shadow-xl transition-shadow">

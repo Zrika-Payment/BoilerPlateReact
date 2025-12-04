@@ -15,10 +15,11 @@ export function Contactus() {
     Form.FormContainer = FormContainer;
 
     return (
-        <Link to="/Contactus"><Form>
-            <Form.FormHeader>Contact Us</Form.FormHeader>
-            <Form.FormDescription>Kindly Fill below Details</Form.FormDescription>
-            <Form.FormContainer>
+        <Form>
+
+            <Form.FormContainer >
+                <Form.FormHeader>Contact Us</Form.FormHeader>
+                <Form.FormDescription>Kindly Fill below Details</Form.FormDescription>
                 <Input
                     id="name"
                     name="name"
@@ -105,6 +106,6 @@ export function Contactus() {
                 />
 
             </Form.FormContainer>
-        </Form></Link>)
+        </Form>)
 
 }

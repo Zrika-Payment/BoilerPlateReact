@@ -28,7 +28,7 @@ export function FormDescription({ classname, children, ...props }) {
 
 export function FormContainer({ classname, children, ...props }) {
     return (
-        <div className={cn('bg-white rounded-xl shadow-lg p-8 space-y-6', classname)}{...props}>
+        <div className={cn('bg-white rounded-xl shadow-2xl p-20 space-y-6 my-6', classname)}{...props}>
             {children}
         </div>
     )

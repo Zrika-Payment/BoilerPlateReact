@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export const Header = ({ nav_Items }) => {
  
   return (
@@ -8,7 +9,7 @@ export const Header = ({ nav_Items }) => {
           <nav className="flex space-x-4">
             {
               nav_Items?.map((list, Index) => {
-              return  <a href={`/pages/${list}`} className="text-gray-600 hover:text-gray-900" key={Index}>{list}</a>
+              return  <Link to={list} className="text-gray-600 hover:text-gray-900" key={Index}>{list}</Link>
               })
             }
 
