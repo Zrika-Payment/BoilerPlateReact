@@ -9,6 +9,7 @@ import { Textarea } from "../components/common/TextArea";
 import { handleChange } from "../hooks/useHandleChange";
 import { countryOptions } from "../constants/config";
 import { Link } from "react-router-dom";
+import Button from '../components/common/Button'
 export function Contactus() {
     Form.FormHeader = FormHeader;
     Form.FormDescription = FormDescription;
@@ -104,7 +105,7 @@ export function Contactus() {
 
                 // error={errors.terms}
                 />
-
+                <Button >Submit</Button>
             </Form.FormContainer>
         </Form>)
 

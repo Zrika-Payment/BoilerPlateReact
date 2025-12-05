@@ -17,6 +17,7 @@ import img3 from './assets/Images/img3.jpg';
 import img4 from './assets/Images/img4.jpg';
 import img5 from './assets/Images/img5.jpg';
 import img6 from './assets/Images/img6.jpg';
+import { Products } from './pages/Products';
 
 function App() {
   const img = [img1,img2,img3,img4,img5,img6];
@@ -76,7 +77,7 @@ function App() {
               </ul>
             </div>
           </div> */}
-     
+     <Products/>
           
        
         </div>
