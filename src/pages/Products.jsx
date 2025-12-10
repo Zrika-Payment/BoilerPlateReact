@@ -1,14 +1,15 @@
 import { useFetch } from "../hooks/useFetch"
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "../components/common/Card";
 import Button from '../components/common/Button'
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { addCart } from "../store/ProdutCart/Cart";
 export function Products() {
     const productDetail = useFetch('https://dummyjson.com/products', {});
     console.log(productDetail);
     const dispatch = useDispatch();
-function handleClick(e){
-
-}
+    function handleAddItems(list) {
+        dispatch(addCart(list));
+    }
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
 
@@ -26,7 +27,7 @@ function handleClick(e){
                             <label>Rating-</label><label>{list.rating}</label>
 
                         </CardContent>
-                        <Button onClick={(e)=>handleClick(e)}>Add</Button>
+                        <Button onClick={()=>handleAddItems(list)}>Add</Button>
                     </Card>
 
                 )

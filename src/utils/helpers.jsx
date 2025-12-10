@@ -1,3 +1,4 @@
+import { lazy } from "react";
 export const formatDate = (date) => {
   return new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -21,3 +22,8 @@ export const debounce = (func, wait) => {
 export const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ');
 };
+
+
+export const LazyLoader = (path) => {
+  return lazy(() => import(path));
+}

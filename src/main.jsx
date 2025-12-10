@@ -9,6 +9,7 @@ import { Dashboard } from './pages/Dashboard.jsx'
 import { About } from './pages/About.jsx'
 import { Provider } from 'react-redux'
 import { store } from './app/store.js'
+import { CartDetails } from './components/layout/CartDetails.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />
+
+      },
+        {
+        path: 'carDetails',
+        element: <CartDetails />
 
       },
     ]

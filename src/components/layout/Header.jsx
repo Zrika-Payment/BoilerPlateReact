@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { useSelector } from "react-redux";
+import { store } from "../../app/store";
+import { LazyLoader } from "../../utils/helpers";
 export const Header = ({ nav_Items }) => {
+  const cartItems = useSelector((store) => store?.cart);
 
   return (
     <header className="bg-white shadow-sm border-b">
@@ -15,8 +19,8 @@ export const Header = ({ nav_Items }) => {
                 return <Link to={list} className="text-gray-600 hover:text-gray-900" key={Index}>{list}</Link>
               })
             }
-            <FontAwesomeIcon icon={faCartShopping} />
 
+            <Link to={'/carDetails'}><span><FontAwesomeIcon icon={faCartShopping} />{cartItems.length}</span></Link>
           </nav>
 
         </div>

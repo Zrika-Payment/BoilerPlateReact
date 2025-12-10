@@ -10,7 +10,7 @@ import FormLayout from './components/layout/FormLayout';
 import { sections, CompanySections, products, support, legal } from './constants/config'
 import { CardDemo } from './components/layout/CardDemo';
 import { Contactus } from './pages/Contactus';
-import  Carousel from './components/layout/Carousel';
+import Carousel from './components/layout/Carousel';
 import img1 from './assets/Images/img1.jpg';
 import img2 from './assets/Images/img2.jpg';
 import img3 from './assets/Images/img3.jpg';
@@ -18,17 +18,18 @@ import img4 from './assets/Images/img4.jpg';
 import img5 from './assets/Images/img5.jpg';
 import img6 from './assets/Images/img6.jpg';
 import { Products } from './pages/Products';
-
+import TestDemo from './components/layout/TestDemo';
+import { BharatButton } from 'bharat-ui/react/components/button'
+import { LazyLoader } from './utils/helpers';
+import { FileUploader } from './components/layout/FileUploader';
 function App() {
-  const img = [img1,img2,img3,img4,img5,img6];
+  const img = [img1, img2, img3, img4, img5, img6];
   const [count, setCount] = useState(0);
   // const CompanyDetail = useFetch("https://fake-json-api.mock.beeceptor.com/companies",{});
   //console.log(CompanyDetail);
 
   return (
     <div className="min-h-screen bg-gray-50">
-      
-
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -38,7 +39,9 @@ function App() {
             A production-ready, extensible architecture for building large-scale React applications.
           </p>
           <Carousel items={img} />
-          <CardDemo/>
+          <CardDemo />
+          <FileUploader />
+
           {/* <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6 ">
             <h2 className="text-2xl font-semibold mb-4">Counter Demo</h2>
             <div className="flex items-center space-x-4">
@@ -77,14 +80,14 @@ function App() {
               </ul>
             </div>
           </div> */}
-     <Products/>
-          
-       
+          <Products />
+
+
         </div>
 
 
       </main>
-      
+
     </div>
   );
 }
