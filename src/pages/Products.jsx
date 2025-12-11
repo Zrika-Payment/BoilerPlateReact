@@ -27,7 +27,7 @@ export function Products() {
                             <label>Rating-</label><label>{list.rating}</label>
 
                         </CardContent>
-                        <Button onClick={()=>handleAddItems(list)}>Add</Button>
+                        <Button onClick={() => handleAddItems(list)}>Add</Button>
                     </Card>
 
                 )

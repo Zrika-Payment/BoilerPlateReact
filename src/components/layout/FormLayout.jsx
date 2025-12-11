@@ -13,7 +13,7 @@ function FormLayout() {
     return (
 
         <div>
-            <Form>
+            <Form >
                 <Form.FormHeader>
                     Registration Form
                 </Form.FormHeader>

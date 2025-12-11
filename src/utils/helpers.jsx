@@ -1,4 +1,5 @@
 import { lazy } from "react";
+import { CHUNK_SIZE } from "../constants/config";
 export const formatDate = (date) => {
   return new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -27,3 +28,16 @@ export const classNames = (...classes) => {
 export const LazyLoader = (path) => {
   return lazy(() => import(path));
 }
+
+export const createChunks = (file) => {
+  const chunks = [];
+  let start = 0;
+
+  while (start < file.size) {
+    const end = start + CHUNK_SIZE;
+    chunks.push(file.slice(start, end));
+    start = end;
+  }
+
+  return chunks;
+};
