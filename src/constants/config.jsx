@@ -45,7 +45,20 @@ export const countryOptions = [
 export const CHUNK_SIZE = 5 * 1024 * 1024; // 5MB per chunk (you can change this)
 
 
-
+export const accordionData = [
+  {
+    title: "What is React?",
+    content: "React is a JavaScript library for building UI."
+  },
+  {
+    title: "What is TailwindCSS?",
+    content: "TailwindCSS is a utility-first CSS framework."
+  },
+    {
+    title: "What is Redux?",
+    content: "Redux is storemanagement Library."
+  }
+];
 
 
 

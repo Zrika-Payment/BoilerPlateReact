@@ -41,3 +41,12 @@ export const createChunks = (file) => {
 
   return chunks;
 };
+
+export function Pagination(){
+  const PAGE_SIZE=10;
+  const totalProducts=products.length;
+  const noOfPages = MATH.ceil(totalProducts/PAGE_SIZE);
+  const start= currentPage*PAGE_SIZE;
+  const end = start+PAGE_SIZE;
+
+}
