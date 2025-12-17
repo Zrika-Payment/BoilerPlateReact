@@ -23,6 +23,8 @@ import { BharatButton } from 'bharat-ui/react/components/button'
 import { LazyLoader } from './utils/helpers';
 import { FileUploader } from './components/layout/FileUploader';
 import { Accordion } from './components/layout/Accordion';
+import { SidebarLayout } from './components/layout/Sidebar/SidebarLayout';
+import { Sidebar } from './components/layout/Sidebar/Sidebar';
 function App() {
   const img = [img1, img2, img3, img4, img5, img6];
   const [count, setCount] = useState(0);
@@ -83,7 +85,7 @@ function App() {
           </div> */}
           <Products />
 
-          <Accordion />
+
         </div>
 
 

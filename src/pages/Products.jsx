@@ -3,7 +3,7 @@ import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "../co
 import Button from '../components/common/Button'
 import { useDispatch } from 'react-redux'
 import { addCart } from "../store/ProdutCart/Cart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Products() {
 
@@ -17,6 +17,13 @@ export function Products() {
     const start = currentPage * PAGE_SIZE;
     const end = start + PAGE_SIZE;
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }, [currentPage]);
+
     function handleAddItems(list) {
         dispatch(addCart(list));
     }
@@ -27,11 +34,8 @@ export function Products() {
     }
 
     function handleNextpage() {
-        setCurrentPage(prev => prev + 1)
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
+        setCurrentPage(prev => prev + 1);
+
 
     }
 

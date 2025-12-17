@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-
+import { Sidebar } from '../components/layout/Sidebar/Sidebar';
+import { SidebarLayout } from '../components/layout/Sidebar/SidebarLayout';
 export const Dashboard = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -21,16 +22,13 @@ export const Dashboard = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">Dashboard</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {data.map(item => (
-          <div key={item.id} className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-            <p className="text-3xl font-bold text-blue-600">{item.value}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+
+    <SidebarLayout
+      sidebar={({ isOpen, toggle }) => (
+        <Sidebar isOpen={isOpen} toggle={toggle} />
+      )}
+    >
+      <h1 className="text-2xl font-bold">Dashboard Content</h1>
+    </SidebarLayout>
   );
 };
