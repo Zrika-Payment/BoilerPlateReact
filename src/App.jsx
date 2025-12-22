@@ -84,7 +84,7 @@ function App() {
             </div>
           </div> */}
           <Products />
-
+<Accordion/>
 
         </div>
 

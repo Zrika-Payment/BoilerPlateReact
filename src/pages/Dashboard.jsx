@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Sidebar } from '../components/layout/Sidebar/Sidebar';
 import { SidebarLayout } from '../components/layout/Sidebar/SidebarLayout';
+import UserDetails from './UserDetails'
 export const Dashboard = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,7 +29,7 @@ export const Dashboard = () => {
         <Sidebar isOpen={isOpen} toggle={toggle} />
       )}
     >
-      <h1 className="text-2xl font-bold">Dashboard Content</h1>
+      <UserDetails />
     </SidebarLayout>
   );
 };
