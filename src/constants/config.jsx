@@ -20,7 +20,7 @@ export const API_ENDPOINTS = {
 };
 
 
-export const NAVITEMS = ['Home', 'About', 'Dashboard', 'Contactus'];
+export const NAVITEMS = ['Home', 'About', 'Dashboard', 'Contactus','Signin'];
 
 export const sections = ['company', 'products', 'support', 'legal'];
 

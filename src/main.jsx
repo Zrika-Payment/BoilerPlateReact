@@ -10,6 +10,7 @@ import { About } from './pages/About.jsx'
 import { Provider } from 'react-redux'
 import { store } from './app/store.js'
 import { CartDetails } from './components/layout/CartDetails.jsx'
+import { LoginPage } from './pages/LoginPage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
         {
         path: 'carDetails',
         element: <CartDetails />
+
+      },
+       {
+        path: 'SignIn',
+        element: <LoginPage />
 
       },
     ]
