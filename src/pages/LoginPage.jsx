@@ -5,15 +5,16 @@ import Button from "../components/common/Button";
 import { CardHeader } from "../components/common/Card";
 import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 export function LoginPage() {
-    const { data, loading, fetchData } = useFetch();
+
     const [username, setUsername] = useState("");
     const [password, setpassword] = useState("");
     const [error, setError] = useState({ userError: "", passError: "" });
+    const [token, setValue] = useLocalStorage("token", null);
+    console.log(token);
 
-
-
-    function handleLogin(e) {
+    const handleLogin = async () => {
 
         let hashError = false;
         if (!username.trim()) {
@@ -63,7 +64,7 @@ export function LoginPage() {
         // if (!hashError) {
         //     setError({ userError: "", passError: "" })
         // }
-        userDetails('https://dummyjson.com/user/login', {
+        await fetch('https://dummyjson.com/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -71,9 +72,19 @@ export function LoginPage() {
                 username: username,
                 password: password,
                 expiresInMins: 30, // optional, defaults to 60
-            })
+            }),
+            // Include cookies (e.g., accessToken) in the request
         })
-
+            .then(res => {
+                if (!res) {
+                    throw new Error("Login failed")
+                }
+                return res.json()
+            }
+            )
+            .then(data => setValue(data.accessToken)).catch((error) => {
+                console.log("Error during login:", error);
+            });
     }
 
 
@@ -86,7 +97,7 @@ export function LoginPage() {
                 <Input label={"password"} type={'password'} placeholder={'password'} onChange={(e) => setpassword(e.target.value)} error={error.passError}></Input>
                 <h4 className="text-blue-300"></h4>
 
-                <Button onClick={(e) => handleLogin(e)}>Login</Button>
+                <Button onClick={handleLogin}>Login</Button>
             </Card>
 
         </div>
